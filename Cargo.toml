@@ -3,6 +3,9 @@ name = "wazip"
 version = "0.1.0"
 authors = ["nasso <nassomails@gmail.com>"]
 edition = "2018"
+description = "A ZIP file manipulation library for JavaScript powered by WASM"
+repository = "https://github.com/nasso/wazip"
+license = "MIT OR Apache-2.0"
 
 # See more keys and their definitions at https://doc.rust-lang.org/cargo/reference/manifest.html
 
