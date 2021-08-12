@@ -8,13 +8,10 @@ and written in Rust.
 ## Usage
 
 ```ts
-import wazip_init, { ZipWriter } from "wazip";
+import { ZipWriter } from "wazip";
 import { saveAs } from "file-saver";
 
 async function main() {
-  // Init wazip by calling its init function (the default export)
-  await wazip_init();
-
   // Create a new ZipWriter to create a new archive
   let writer = new ZipWriter();
 
@@ -32,7 +29,7 @@ async function main() {
   let zip_data = writer.finish();
 
   // This example uses file-saver to download the generated ZIP file
-  saveAs(new Blob([zip_data], { type = "application/zip" }), "bar.zip");
+  saveAs(new Blob([zip_data], { type: "application/zip" }), "bar.zip");
 }
 
 main();
