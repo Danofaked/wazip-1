@@ -82,7 +82,7 @@ impl ZipWriter {
     }
 
     /// Closes the ZipWriter and returns the generated binary data (the zip file) as a `Uint8Array`.
-    pub fn finish(&mut self) -> Result<Vec<u8>, JsValue> {
+    pub fn finish(mut self) -> Result<Vec<u8>, JsValue> {
         self.inner
             .finish()
             .map(Cursor::into_inner)
